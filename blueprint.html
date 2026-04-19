@@ -221,11 +221,31 @@
 
     <!-- PRIVACY BANNER (Law 25) -->
     <div id="privacy-banner" class="privacy-banner">
-        <p style="font-size: 0.85rem; max-width: 800px;">
-            We value your privacy. This site uses cookies and collects personal data to improve your experience and provide our coaching services. By continuing, you agree to our data policy in compliance with Quebec's Law 25.
+        <p style="font-size: 0.85rem; max-width: 800px; color: var(--text-muted);">
+            We value your privacy. This site uses cookies and collects personal data to provide our coaching services. By continuing, you agree to our data policy in compliance with Quebec's Law 25.
         </p>
-        <button class="btn btn-primary" style="padding: 0.5rem 1.5rem; min-height: auto;" onclick="acceptPrivacy()">Accept</button>
+        <div class="privacy-btns" style="display: flex; gap: 0.5rem; align-items: center;">
+            <button class="btn-subtle" onclick="acceptEssential()">Essential Only</button>
+            <button class="btn btn-primary" style="padding: 0.5rem 1.5rem; min-height: auto;" onclick="acceptPrivacy()">Accept All</button>
+        </div>
     </div>
+
+    <style>
+        .btn-subtle {
+            background: transparent;
+            border: 1px solid var(--glass-border);
+            color: var(--text-muted);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .btn-subtle:hover {
+            background: rgba(255,255,255,0.05);
+            color: white;
+        }
+    </style>
 
     <script>
         lucide.createIcons();
@@ -240,9 +260,12 @@
 
         function acceptPrivacy() {
             document.getElementById('privacy-banner').style.display = 'none';
-            localStorage.setItem('privacy_accepted', 'true');
+            localStorage.setItem('privacy_accepted', 'all');
         }
-
+        function acceptEssential() {
+            document.getElementById('privacy-banner').style.display = 'none';
+            localStorage.setItem('privacy_accepted', 'essential');
+        }
         if (localStorage.getItem('privacy_accepted')) {
             document.getElementById('privacy-banner').style.display = 'none';
         }
