@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aesthetic Strength | 1-on-1 Elite Calisthenics Coaching</title>
+  <meta name="description" content="Transform your body and master calisthenics with high-performance 1-on-1 coaching. Build power, skill, and an aesthetic physique today.">
+  <link rel="stylesheet" href="style.css">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- HERO SECTION -->
+  <header>
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-tagline">Elite Performance Coaching</span>
+        <h1>Master Your Body. <br><span class="text-accent">Unlock</span> Your Power.</h1>
+        <p class="hero-sub">The exact roadmap to build a shredded physique and master advanced calisthenics skills with 1-on-1 guidance.</p>
+        <div class="hero-btns">
+          <a href="#apply" class="btn btn-primary">Apply for Coaching</a>
+          <a href="blueprint.html" class="btn btn-outline" style="margin-left: 1rem;">Free Blueprint <i data-lucide="download" style="width: 16px; margin-left: 8px;"></i></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- PRIVACY BANNER (Law 25) -->
+  <div id="privacy-banner" class="privacy-banner">
+    <p style="font-size: 0.85rem; max-width: 800px;">
+        We value your privacy. This site uses cookies and collects personal data to provide our coaching services. By continuing, you agree to our data policy in compliance with Quebec's Law 25.
+    </p>
+    <button class="btn btn-primary" style="padding: 0.5rem 1.5rem; min-height: auto;" onclick="acceptPrivacy()">Accept</button>
+  </div>
+
+  <style>
+    /* Privacy Banner Styles */
+    .privacy-banner {
+        position: fixed;
+        bottom: 2rem;
+        left: 2rem;
+        right: 2rem;
+        background: var(--bg-secondary);
+        padding: 1.5rem;
+        border-radius: 12px;
+        border: 1px solid var(--glass-border);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    @media (max-width: 768px) {
+        .privacy-banner {
+            flex-direction: column;
+            gap: 1rem;
+            text-align: center;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            border-radius: 0;
+        }
+    }
+  </style>
+
+  <script>
+    function acceptPrivacy() {
+        document.getElementById('privacy-banner').style.display = 'none';
+        localStorage.setItem('privacy_accepted', 'true');
+    }
+    if (localStorage.getItem('privacy_accepted')) {
+        document.getElementById('privacy-banner').style.display = 'none';
+    }
+  </script>
+
+  <!-- PROBLEM SECTION -->
+  <section id="problem">
+    <div class="container">
+      <span class="section-label">The Struggle</span>
+      <h2 class="section-title">Are You Training, <br>Or Just <span class="text-accent">Guessing?</span></h2>
+      <div class="grid-3">
+        <div class="problem-item">
+          <div class="problem-icon"><i data-lucide="trending-down"></i></div>
+          <h3>Slow Progress</h3>
+          <p class="text-muted">Spending months in the gym without seeing actual changes in your physique or skill levels.</p>
+        </div>
+        <div class="problem-item">
+          <div class="problem-icon"><i data-lucide="map"></i></div>
+          <h3>Zero Structure</h3>
+          <p class="text-muted">Following random YouTube workouts instead of a scientifically backed progression plan.</p>
+        </div>
+        <div class="problem-item">
+          <div class="problem-icon"><i data-lucide="zap-off"></i></div>
+          <h3>Lack of Motivation</h3>
+          <p class="text-muted">Without accountability, it's easy to skip sessions or hold back when things get difficult.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUTION SECTION -->
+  <section id="solution">
+    <div class="container grid-2">
+      <div class="solution-text">
+        <span class="section-label">The Solution</span>
+        <h2 style="text-align: left; margin-bottom: 2rem;">A System Built for <span class="text-accent">Evolution</span></h2>
+        <p style="margin-bottom: 2rem; color: var(--text-muted);">Stop guessing. My 1-on-1 coaching provides the exact structure and accountability you need to break plateaus and build elite strength.</p>
+        <a href="#apply" class="btn btn-primary">Start Your Evolution</a>
+      </div>
+      <div class="solution-card" style="padding: 0; overflow: hidden; display: flex; background: transparent;">
+         <video autoplay loop muted playsinline preload="auto" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+            <source src="M-UP.mp4" type="video/mp4">
+         </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT YOU GET -->
+  <section id="features">
+    <div class="container">
+      <span class="section-label">Inside the Program</span>
+      <h2 class="section-title">The High-Performance <span class="text-accent">Toolkit</span></h2>
+      <div class="grid-2">
+        <div class="feature-list">
+          <div class="feature-item">
+            <div class="check-icon"><i data-lucide="check-circle-2"></i></div>
+            <div>
+              <h3>Personalized Training Program</h3>
+              <p class="text-muted">Every set, rep, and exercise selected for your specific body and goals.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="check-icon"><i data-lucide="check-circle-2"></i></div>
+            <div>
+              <h3>Calisthenics Skill Mastery</h3>
+              <p class="text-muted">Dedicated tracks for Muscle-ups, Handstands, Front Levers, and more.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="check-icon"><i data-lucide="check-circle-2"></i></div>
+            <div>
+              <h3>Weekly Tracking & Audits</h3>
+              <p class="text-muted">Video form analysis and data tracking to ensure continuous progress.</p>
+            </div>
+          </div>
+        </div>
+        <div class="feature-list">
+          <div class="feature-item">
+            <div class="check-icon"><i data-lucide="check-circle-2"></i></div>
+            <div>
+              <h3>Physique Strategy</h3>
+              <p class="text-muted">Optimize your body composition while getting stronger than ever.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="check-icon"><i data-lucide="check-circle-2"></i></div>
+            <div>
+              <h3>24/7 Priority Support</h3>
+              <p class="text-muted">Direct access to me for any questions, modifications, or motivation.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="check-icon"><i data-lucide="check-circle-2"></i></div>
+            <div>
+              <h3>Strength & Conditioning</h3>
+              <p class="text-muted">Hybrid approach combining calisthenics with targeted weighted training.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO THIS IS FOR -->
+  <section id="audience" style="background: var(--bg-tertiary);">
+    <div class="container">
+      <div class="grid-2">
+        <div>
+          <h2 style="text-align: left;">Is This For <span class="text-accent">You?</span></h2>
+          <p class="text-muted" style="margin-top: 1rem;">I only work with dedicated individuals who are ready to put in the work.</p>
+        </div>
+        <div class="audience-grid grid-3" style="grid-column: span 2; margin-top: 4rem;">
+           <div class="problem-item"><h3>Action Takers</h3><p class="text-muted">You're tired of talk and ready to see real results.</p></div>
+           <div class="problem-item"><h3>Skill Seekers</h3><p class="text-muted">You want to move your body like an elite athlete.</p></div>
+           <div class="problem-item"><h3>Growth Mindset</h3><p class="text-muted">You're willing to follow a plan and be held accountable.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="results">
+    <div class="container-fluid">
+      <span class="section-label">Proven Success</span>
+      <h2 class="section-title">Success <span class="text-accent">Stories</span></h2>
+      
+      <div class="testimonial-ticker-wrapper">
+        <div class="testimonial-ticker">
+          <!-- Slide 1 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">J</div>
+              <div class="testimonial-meta">
+                <div class="testimonial-author-name">Julian R.</div>
+                <div class="stars">
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </div>
+              </div>
+            </div>
+            <p>"I lost 25lbs in 4 months while unlocking my first Muscle-up. Beyond the physique, this discipline brought me a rigor that impacts my entire life."</p>
+          </div>
+          <!-- Slide 2 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">T</div>
+              <div class="testimonial-meta">
+                <div class="testimonial-author-name">Thomas B.</div>
+                <div class="stars">
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27V2z"/></svg>
+                </div>
+              </div>
+            </div>
+            <p>"Going from zero pull-ups to a Front Lever seemed impossible. This program made it happen and restored a level of self-confidence I hadn't felt in years."</p>
+          </div>
+          <!-- Slide 3 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">M</div>
+              <div class="testimonial-meta">
+                <div class="testimonial-author-name">Marc L.</div>
+                <div class="stars">
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </div>
+              </div>
+            </div>
+            <p>"Radical transformation. I shredded my physique and mastered the handstand. The shift in mindset is what I'm most proud of today."</p>
+          </div>
+          <!-- Slide 4 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">K</div>
+              <div class="testimonial-meta">
+                <div class="testimonial-author-name">Kevin D.</div>
+                <div class="stars">
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24" class="empty"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </div>
+              </div>
+            </div>
+            <p>"The coaching helped me lose the 'dad bod' and become a machine. My personal discipline has never been higher. A true life changer."</p>
+          </div>
+          <!-- Slide 5 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">R</div>
+              <div class="testimonial-meta">
+                <div class="testimonial-author-name">Ryan P.</div>
+                <div class="stars">
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27V2z"/></svg>
+                </div>
+              </div>
+            </div>
+            <p>"35lbs down and handstand push-ups validated. This journey taught me that anything is possible with the right method. A new start."</p>
+          </div>
+          <!-- Slide 6 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">L</div>
+              <div class="testimonial-meta">
+                <div class="testimonial-author-name">Lucas M.</div>
+                <div class="stars">
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </div>
+              </div>
+            </div>
+            <p>"I finally unlocked the planche and dropped the extra fat. The discipline I learned here now reflects in everything I do daily."</p>
+          </div>
+          
+          <!-- Duplicate for seamless scroll -->
+          <div class="testimonial-slide">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">J</div>
+              <div class="testimonial-meta">
+                <div class="testimonial-author-name">Julian R.</div>
+                <div class="stars">
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </div>
+              </div>
+            </div>
+            <p>"I lost 25lbs in 4 months while unlocking my first Muscle-up. Beyond the physique, this discipline brought me a rigor that impacts my entire life."</p>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">T</div>
+              <div class="testimonial-meta">
+                <div class="testimonial-author-name">Thomas B.</div>
+                <div class="stars">
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2v15.27z"/></svg>
+                </div>
+              </div>
+            </div>
+            <p>"Going from zero pull-ups to a Front Lever seemed impossible. This program made it happen and restored a level of self-confidence I hadn't felt in years."</p>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">M</div>
+              <div class="testimonial-meta">
+                <div class="testimonial-author-name">Marc L.</div>
+                <div class="stars">
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </div>
+              </div>
+            </div>
+            <p>"Radical transformation. I shredded my physique and mastered the handstand. The shift in mindset is what I'm most proud of today."</p>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">K</div>
+              <div class="testimonial-meta">
+                <div class="testimonial-author-name">Kevin D.</div>
+                <div class="stars">
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24" class="empty"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </div>
+              </div>
+            </div>
+            <p>"The coaching helped me lose the 'dad bod' and become a machine. My personal discipline has never been higher. A true life changer."</p>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">R</div>
+              <div class="testimonial-meta">
+                <div class="testimonial-author-name">Ryan P.</div>
+                <div class="stars">
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2v15.27z"/></svg>
+                </div>
+              </div>
+            </div>
+            <p>"35lbs down and handstand push-ups validated. This journey taught me that anything is possible with the right method. A new start."</p>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">L</div>
+              <div class="testimonial-meta">
+                <div class="testimonial-author-name">Lucas M.</div>
+                <div class="stars">
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </div>
+              </div>
+            </div>
+            <p>"I finally unlocked the planche and dropped the extra fat. The discipline I learned here now reflects in everything I do daily."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT COACH -->
+  <section id="coach">
+    <div class="container grid-2">
+      <div class="coach-image-container">
+        <img src="coach-transformation-2.jpg" alt="Coach Transformation" class="coach-img">
+        <div class="coach-img-overlay"></div>
+      </div>
+      <div>
+        <span class="section-label">The Architect</span>
+        <h2 style="text-align: left; margin-bottom: 2rem;">I Help Men Master Their <span class="text-accent">Physical Potential</span></h2>
+        <p class="text-muted" style="margin-bottom: 1.5rem;">I've spent a decade mastering bodyweight skills and strength training. My mission is to cut through the noise and give you the most efficient path to an aesthetic and powerful body.</p>
+        <p class="text-muted">This isn't just a workout routine. It's an education in performance.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPLICATION FORM -->
+  <section id="apply">
+    <div class="container">
+      <div class="form-container">
+        <span class="section-label">Start Your Journey</span>
+        <h2 class="section-title">Apply for <span class="text-accent">Coaching</span></h2>
+        <!-- Calendly inline widget begin -->
+        <div class="calendly-inline-widget" data-url="https://calendly.com/kenscalilab/30min" style="min-width:320px;height:700px;"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        <!-- Calendly inline widget end -->
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Aesthetic Strength Coaching. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="floating-cta">
+    <a href="#apply" class="btn btn-primary">Apply Now</a>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

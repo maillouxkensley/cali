@@ -1,0 +1,12 @@
+{
+  "name": "cali-coach",
+  "version": "1.0.0",
+  "description": "Elite Calisthenics Coaching Site",
+  "main": "index.js",
+  "scripts": {
+    "start": "serve ."
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^8.1.0"
+  }
+}
