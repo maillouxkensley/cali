@@ -270,42 +270,33 @@
             document.getElementById('privacy-banner').style.display = 'none';
         }
 
-        // Form Handling
-        document.getElementById('blueprint-form').addEventListener('submit', async (e) => {
+        // Form Handling (STANDBY: Direct download enabled while SendGrid is pending)
+        document.getElementById('blueprint-form').addEventListener('submit', (e) => {
             e.preventDefault();
             const submitBtn = e.target.querySelector('button');
-            const originalText = submitBtn.innerText;
-            submitBtn.innerText = 'Sending...';
-            submitBtn.disabled = true;
-
+            
+            // Simulation of success for local testing/standby
+            submitBtn.innerText = 'Success! Downloading...';
+            submitBtn.style.backgroundColor = '#28a745';
+            
+            // Direct Download
+            window.location.href = '/blueprint.pdf';
+            
+            setTimeout(() => {
+                closePopup();
+                submitBtn.innerText = 'Get My Blueprint Now';
+                submitBtn.style.backgroundColor = '';
+            }, 3000);
+            
+            /* 
+            // Original Lead Capture Logic (Commented for Standby)
             const data = {
                 name: document.getElementById('lead_name').value,
                 email: document.getElementById('lead_email').value,
                 phone: document.getElementById('lead_phone').value
             };
-
-            try {
-                const response = await fetch('/api/lead', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(data)
-                });
-
-                if (response.ok) {
-                    submitBtn.innerText = 'Success!';
-                    submitBtn.style.backgroundColor = '#28a745';
-                    // Trigger download
-                    window.location.href = '/blueprint.pdf';
-                    setTimeout(() => closePopup(), 2000);
-                } else {
-                    throw new Error('Failed to send');
-                }
-            } catch (err) {
-                console.error(err);
-                submitBtn.innerText = 'Error. Try again.';
-                submitBtn.style.backgroundColor = '#dc3545';
-                submitBtn.disabled = false;
-            }
+            // ... (Rest of fetch logic)
+            */
         });
     </script>
 </body>
