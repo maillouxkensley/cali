@@ -438,6 +438,24 @@
     </div>
   </section>
 
+  <!-- BLUEPRINT SECTION -->
+  <section id="blueprint-promo" style="background: radial-gradient(circle at center, rgba(30, 64, 175, 0.05) 0%, transparent 70%); border-top: 1px solid var(--glass-border); padding: 100px 0;">
+    <div class="container grid-2">
+      <div class="hero-content" style="text-align: left;">
+          <span class="section-label">Free Resource</span>
+          <h2>The <span class="text-accent">Aesthetic</span> Strength Blueprint.</h2>
+          <p class="hero-sub" style="margin-bottom: 2rem; color: var(--text-muted);">Master the Planche, Muscle-up, and more. Download the exact guide I use with my elite clients to build raw power.</p>
+          <button onclick="openBlueprintPopup()" class="btn btn-primary">Download Free Guide</button>
+      </div>
+      <div class="mockup-container" style="perspective: 1000px; display: flex; justify-content: center; align-items: center;">
+          <div class="book-mockup" style="width: 240px; height: 320px; background: #0a0a0a; border-radius: 4px 12px 12px 4px; box-shadow: 20px 20px 60px rgba(0,0,0,0.8); transform: rotateY(-15deg) rotateX(5deg); position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 2rem; border-left: 8px solid #000;">
+              <div style="background: var(--bg-tertiary); padding: 0.3rem 0.8rem; border-radius: 100px; font-size: 0.7rem; color: var(--text-muted); margin-bottom: 0.5rem; border: 1px solid var(--glass-border);">FREE PDF</div>
+              <div style="font-family: 'Outfit', sans-serif; font-size: 1.2rem; color: var(--accent); text-transform: uppercase; font-weight: 800; line-height: 1.1; text-align: center;">THE AESTHETIC<br>STRENGTH<br>BLUEPRINT</div>
+          </div>
+      </div>
+    </div>
+  </section>
+
   <!-- APPLICATION FORM -->
   <section id="apply">
     <div class="container">
@@ -452,6 +470,31 @@
     </div>
   </section>
 
+  <!-- BLUEPRINT MODAL -->
+  <div id="blueprint-modal" class="popup-overlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); display: none; justify-content: center; align-items: center; z-index: 3000; backdrop-filter: blur(8px);">
+    <div class="popup-content" style="background: var(--bg-secondary); padding: 3rem; border-radius: 16px; max-width: 500px; width: 90%; border: 1px solid var(--glass-border); position: relative;">
+        <button onclick="closeBlueprintPopup()" style="position: absolute; top: 1rem; right: 1rem; background: transparent; border: none; color: var(--text-muted); cursor: pointer;"><i data-lucide="x"></i></button>
+        <h2 style="margin-bottom: 1rem; text-align: center;">Get the <span class="text-accent">Blueprint</span></h2>
+        <form id="blueprint-form">
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" required placeholder="John Doe">
+            </div>
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" required placeholder="john@example.com">
+            </div>
+            <div style="margin: 1.5rem 0; display: flex; gap: 1rem; align-items: flex-start;">
+                <input type="checkbox" required style="width: auto; margin-top: 4px;">
+                <label style="font-size: 0.75rem; line-height: 1.4; color: var(--text-muted);">
+                    I agree to receiving this guide and consent to the data policy under Law 25.
+                </label>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Download Now</button>
+        </form>
+    </div>
+  </div>
+
   <footer>
     <div class="container">
       <p>&copy; 2026 Aesthetic Strength Coaching. All rights reserved.</p>
@@ -465,6 +508,31 @@
   <script src="script.js"></script>
   <script>
     lucide.createIcons();
+
+    // Blueprint Popup Logic
+    function openBlueprintPopup() {
+        document.getElementById('blueprint-modal').style.display = 'flex';
+    }
+    function closeBlueprintPopup() {
+        document.getElementById('blueprint-modal').style.display = 'none';
+    }
+
+    // Direct Download (Standby mode)
+    document.getElementById('blueprint-form')?.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const btn = e.target.querySelector('button');
+        btn.innerText = 'Success! Opening...';
+        btn.style.backgroundColor = '#28a745';
+        
+        // Use window.open for better stability with PDFs
+        window.open('blueprint.pdf', '_blank');
+        
+        setTimeout(() => {
+            closeBlueprintPopup();
+            btn.innerText = 'Get My Blueprint Now';
+            btn.style.backgroundColor = '';
+        }, 3000);
+    });
   </script>
 </body>
 </html>
